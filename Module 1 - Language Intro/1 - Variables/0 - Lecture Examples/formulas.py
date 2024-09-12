@@ -13,3 +13,4 @@ final = principal * ((1 + (rate / 100)) ** n)
 # fancy print the output with two decimal places for floating number
 print(f"Final value after is ${final:.2f}")
 
+# I have no idea why there are f's in that line up there

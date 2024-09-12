@@ -1,6 +1,9 @@
 # bring in randomness cause we need it in our lives
 import random
 
+from unicodedata import decimal
+
+
 ### Begin Dr. Forsyth Code. Do Not Modify ###
 
 # copy in Dr. Forsyth's random list function for use
@@ -29,3 +32,13 @@ num_evens = 0
 num_odds = 0
 
 ### YOUR CODE BEGINS HERE ###
+
+print("List is:",nums)
+for num in nums:
+    if num % 2 == 1:
+        num_odds = num_odds + 1
+    else:
+        num_evens = num_evens + 1
+
+print("number of evens is ",num_evens)
+print("number of odds is ",num_odds)

@@ -1,4 +1,7 @@
 # helpful function to see if word starts with vowel
+from dataclasses import replace
+
+
 def starts_with_vowel(word):
     """
     Return True if the work starts with a vowel, False otherwise
@@ -25,7 +28,7 @@ print("The original sentence is: ", original_sentence)
 
 # break sentence in various words
 words = original_sentence.split(" ")
-
+print(words)
 # create new list to hold sentence
 pig_latin = list()
 
@@ -36,19 +39,25 @@ for word in words:
     # word is too short. Do nothing.
     if len(word) < 3:
         # place the word in the pig_latin list
-        ### your code here ###
+        pig_latin.append(word)
         continue
 
     # starts with vowel, modify accordingly and put in list
     elif starts_with_vowel(word) == True:
         # modify the word and place in pig_latin list
-        ### your code here ###
+        vowel_ending = "vay"
+        word = word+vowel_ending
+        pig_latin.append(word)
         continue
 
     # starts with consonant, modify accordingly  and put in list
     else:
         # modify word and place in pig_latin list
-        ### your code here ###
+        first_consonant = word[0]
+        consonant_ending = first_consonant+"ay"
+        word = word[1:]
+        word = word+consonant_ending
+        pig_latin.append(word)
         continue
 
 # a new sentence in which you will re-assemble each of the modified words

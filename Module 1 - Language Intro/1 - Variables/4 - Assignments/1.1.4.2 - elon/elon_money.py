@@ -13,9 +13,22 @@ the 20-year bonds pay 4.32%, with each compounding annually.
 
 ### all your code below ###
 
+principal = (33 * (10**9))
+r1 = 3.96
+r2 = 4.32
+n1 = 10
+n2 = 20
+
+print("Principal value is $", principal)
+print("10 year rate is ",r1)
+print("20 year rate is ",r2)
 
 # final answer for 10-year
-ten_year_final = None
+ten_year_final = principal * ((1 + (r1 / 100)) ** n1)
+
+print("10-year bond worth is $", round(ten_year_final,2)) # I looked up and used the round function to get this into the right format
 
 # final answer for 20-year
-twenty_year_final = None
+twenty_year_final = principal * ((1 + (r2 / 100)) ** n2)
+
+print("20-year bond worth is $", round(twenty_year_final,2)) # I looked up and used the round function to get this into the right format
