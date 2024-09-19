@@ -19,11 +19,14 @@ def dot_product(a,b):
     """
 
     ### YOUR CODE HERE ###
+    dpi=0 #Initial starting value (0)
 
+
+    for i in range(0,len(a)):
+        dpi = dpi + a[i] * b[i]
 
     ### CHANGE THIS RETURN VALUE. IT IS HERE SO THE CODE DOES NOT ERROR
-    return None
-
+    return dpi
 """
 Step 1: Generate two "vectors" of equal length but full of random values
 """
@@ -32,16 +35,22 @@ maximum_value = 100
 fixed_length = int(random.uniform(2, max_length))
 vector_a = generate_random_int_list(fixed_length, maximum_value)
 vector_b = generate_random_int_list(fixed_length, maximum_value)
+print("Vector A is :",vector_a)
+print("Length of A is :",len(vector_a))
+print("Vector B is :",vector_b)
+print("Length of B is :",len(vector_b))
 
 """
 Step 2: Call your custom dot_product function
 """
 result = dot_product(vector_a,vector_b)
+print("The function result is :",result)
 
 """
 Step 3: Check your calculation against numpy
 """
 true_result = np.dot(vector_a,vector_b)
+print("The actual result is :",true_result)
 
 """
 Step 4: See if you're correct....
